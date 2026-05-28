@@ -7,9 +7,9 @@ Este documento serve como o manual oficial de padronização para o histórico d
 ## 1. Estrutura Padrão do Commit
 
 Toda mensagem de commit deve seguir a seguinte estrutura:
-
-<tipo>(<escopo>): <descrição curta em minúsculo>
-
+```test
+   <tipo>(<escopo>): <descrição curta em minúsculo>
+```
 - **Tipo**: OBRIGATÓRIO. Indica a natureza da alteração (ex: nova funcionalidade, correção).
 - **Escopo**: OPCIONAL (mas recomendado). Indica qual parte do código foi afetada (ex: readme, login, banco-dados).
 - **Descrição**: OBRIGATÓRIO. Um resumo claro, direto, no presente e iniciando em letra minúscula.
