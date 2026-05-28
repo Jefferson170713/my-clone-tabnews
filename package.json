@@ -1,0 +1,16 @@
+{
+  "name": "my-clone-tabnews",
+  "version": "1.0.0",
+  "description": "Implementação pessoal dos ensinamentos do curso.dev, para treinar programação.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jefferson de almeida",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
