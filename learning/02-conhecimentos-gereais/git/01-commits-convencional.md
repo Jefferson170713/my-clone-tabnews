@@ -7,9 +7,11 @@ Este documento serve como o manual oficial de padronização para o histórico d
 ## 1. Estrutura Padrão do Commit
 
 Toda mensagem de commit deve seguir a seguinte estrutura:
+
 ```test
    <tipo>(<escopo>): <descrição curta em minúsculo>
 ```
+
 - **Tipo**: OBRIGATÓRIO. Indica a natureza da alteração (ex: nova funcionalidade, correção).
 - **Escopo**: OPCIONAL (mas recomendado). Indica qual parte do código foi afetada (ex: readme, login, banco-dados).
 - **Descrição**: OBRIGATÓRIO. Um resumo claro, direto, no presente e iniciando em letra minúscula.
@@ -18,15 +20,15 @@ Toda mensagem de commit deve seguir a seguinte estrutura:
 
 ## 2. Tipos de Commit Mais Utilizados (Padrão de Mercado)
 
-| Tipo | Quando usar? | Exemplo Prático |
-| :--- | :--- | :--- |
-| **feat** | Quando você adiciona uma nova funcionalidade ao sistema. | feat(api): adiciona rota de criação de usuários |
-| **fix** | Quando você corrige um bug ou comportamento incorreto. | fix(auth): corrige expiração do token de sessão |
-| **docs** | Alterações exclusivas na documentação (README, manuais). | docs(readme): atualiza instruções de pré-requisitos |
-| **style** | Mudanças de estilo/formatação que não alteram a lógica (espaços, ponto e vírgula, lint). | style(css): centraliza botão do card de notícias |
-| **refactor** | Alteração no código que melhora a estrutura interna sem mudar o comportamento público. | refactor(db): otimiza query de busca de posts |
-| **test** | Criação, modificação ou correção de testes unitários ou de integração. | test(user): adiciona teste para e-mail duplicado |
-| **chore** | Atualizações de tarefas de build, pacotes adicionados no package.json, configurações de ferramentas. | chore(deps): adiciona pacote dotenv para variáveis de ambiente |
+| Tipo         | Quando usar?                                                                                         | Exemplo Prático                                                |
+| :----------- | :--------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
+| **feat**     | Quando você adiciona uma nova funcionalidade ao sistema.                                             | feat(api): adiciona rota de criação de usuários                |
+| **fix**      | Quando você corrige um bug ou comportamento incorreto.                                               | fix(auth): corrige expiração do token de sessão                |
+| **docs**     | Alterações exclusivas na documentação (README, manuais).                                             | docs(readme): atualiza instruções de pré-requisitos            |
+| **style**    | Mudanças de estilo/formatação que não alteram a lógica (espaços, ponto e vírgula, lint).             | style(css): centraliza botão do card de notícias               |
+| **refactor** | Alteração no código que melhora a estrutura interna sem mudar o comportamento público.               | refactor(db): otimiza query de busca de posts                  |
+| **test**     | Criação, modificação ou correção de testes unitários ou de integração.                               | test(user): adiciona teste para e-mail duplicado               |
+| **chore**    | Atualizações de tarefas de build, pacotes adicionados no package.json, configurações de ferramentas. | chore(deps): adiciona pacote dotenv para variáveis de ambiente |
 
 ---
 
@@ -50,6 +52,7 @@ Uma Breaking Change ocorre quando você faz uma alteração no código que quebr
 Para sinalizar isso no padrão semântico, adicionamos uma exclamação (!) logo após o escopo. Isso avisa as ferramentas de CI/CD para gerarem uma nova Major Version do software de forma automática.
 
 ### Exemplos:
+
 - feat(api)!: altera o formato de retorno do payload de autenticação
 - refactor(db)!: remove a tabela temporaria de logs antigos
 

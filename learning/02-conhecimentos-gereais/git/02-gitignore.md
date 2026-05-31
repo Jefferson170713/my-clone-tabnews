@@ -6,9 +6,9 @@ Este documento consolida os aprendizados sobre o ciclo de vida de arquivos no Gi
 
 ## 1. O que é o `.gitignore` e para que serve?
 
-O **`.gitignore`** é um arquivo de configuração estrito colocado obrigatoriamente na raiz do repositório. A sua função na arquitetura do projeto é listar padrões de nomes de arquivos e diretórios que o Git deve ignorar completamente. 
+O **`.gitignore`** é um arquivo de configuração estrito colocado obrigatoriamente na raiz do repositório. A sua função na arquitetura do projeto é listar padrões de nomes de arquivos e diretórios que o Git deve ignorar completamente.
 
-Arquivos que casam com as regras do `.gitignore` não aparecem no comando `git status` e ficam impedidos de entrar na *Stage Area*, evitando commits acidentais de arquivos desnecessários ou perigosos.
+Arquivos que casam com as regras do `.gitignore` não aparecem no comando `git status` e ficam impedidos de entrar na _Stage Area_, evitando commits acidentais de arquivos desnecessários ou perigosos.
 
 ---
 
@@ -62,17 +62,21 @@ Thumbs.db
 Após criar e salvar o arquivo `.gitignore` na raiz do projeto, execute os seguintes comandos para validar o isolamento:
 
 ### Passo 1: Verificar se surtiu efeito
+
 ```bash
 git status
 ```
-*Se você fez tudo certo, a pasta `node_modules/` sumirá da listagem de arquivos modificados, e apenas o arquivo `.gitignore` aparecerá como novo arquivo detectado.*
+
+_Se você fez tudo certo, a pasta `node_modules/` sumirá da listagem de arquivos modificados, e apenas o arquivo `.gitignore` aparecerá como novo arquivo detectado._
 
 ### Passo 2: Adicionar o configurador ao Git
+
 ```bash
 git add .gitignore
 ```
 
 ### Passo 3: Realizar o commit semântico
+
 ```bash
 git commit -m "chore(infra): adiciona arquivo .gitignore para isolamento de dependencias"
 ```
