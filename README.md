@@ -17,6 +17,8 @@ Implementação pessoal dos ensinamentos do curso.dev, para treinar programaçã
 │  │  ├──📁starting/
 │  │  └──📁producion/
 │  └── password.js
+├──📁test/
+│  └── calculadora.test.js
 ├──📁learning/
 │   ├──📁01-curso-dev/
 │   │   ├── 01-aula.md
