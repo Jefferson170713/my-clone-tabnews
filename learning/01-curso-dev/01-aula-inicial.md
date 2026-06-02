@@ -121,5 +121,5 @@ _O NVM lerá automaticamente o arquivo `.nvmrc` presente no diretório atual e a
 ├── .prettierignore
 ├── package-lock.json
 ├── package.json
-└── README.md 
+└── README.md
 ```

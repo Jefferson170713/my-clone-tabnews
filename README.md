@@ -37,5 +37,5 @@ Implementação pessoal dos ensinamentos do curso.dev, para treinar programaçã
 ├── .prettierignore
 ├── package-lock.json
 ├── package.json
-└── README.md 
+└── README.md
 ```
