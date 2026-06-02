@@ -87,19 +87,39 @@ nvm use
 _O NVM lerá automaticamente o arquivo `.nvmrc` presente no diretório atual e aplicará a versão correta instantaneamente._
 
 ```text
-my-clone-tabnews/
+📁 root/
+├──📁pages/
+│  └── index.js
+├──📁models/
+│  ├── user.js
+│  ├── content.js
+│  └── password.js
+├──📁infra/
+│  ├── database.js
+│  ├──📁migrations/
+│  ├──📁provisioning/
+│  │  ├──📁starting/
+│  │  └──📁producion/
+│  └── password.js
+├──📁learning/
+│   ├──📁01-curso-dev/
+│   │   ├── 01-aula.md
+│   │   ├── 02-aula.md
+│   │   └── 0n-etc.md
+│   └──📁02-conhecimento-geral/
+│      ├──📁git/
+│      │   ├── 01-aula.md
+│      │   └── 0n-etc.md
+│      ├──📁docker/
+│      │   └── 01-conceitos-basicos.md
+│      │   └── 0n-etc.md
+│      └──📁arquitetura/
+│          └── 01-solid.md
 ├── .nvmrc
-├── README.md
-└── learning/                  <-- Sua pasta principal de estudos
-    ├── 01-curso-dev/          <-- Conteúdo sequencial das aulas
-    │   ├── 01-introducao.md
-    │   ├── 02-setup-ambiente.md
-    │   └── 03-variaveis-amb.md
-    └── 02-conhecimento-geral/ <-- Conceitos base (tecnologias, arquitetura)
-        ├── git/
-        │   └── comandos-uteis.md
-        ├── docker/
-        │   └── conceitos-basicos.md
-        └── arquitetura/
-            └── solid.md
+├── .editorconfig
+├── .gitignore
+├── .prettierignore
+├── package-lock.json
+├── package.json
+└── README.md 
 ```
