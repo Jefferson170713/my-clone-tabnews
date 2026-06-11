@@ -4,7 +4,7 @@
   "description": "Implementação pessoal dos ensinamentos do curso.dev, para treinar programação.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "docker compose -f infra/compose.yaml up -d && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
