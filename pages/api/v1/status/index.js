@@ -1,10 +1,22 @@
 import database from "infra/database.js";
 
 async function status(request, response) {
-  const result = await database.query("SELECT 1 + 1 as sum;");
-  console.log(result.rows[0]);
+  const updatedAt = new Date().toISOString();
+
+  const dataBaseVersionResult = await database.query("SHOW server_version;");
+  const dataBaseVersionResult_ = await database.query("select version();");
+  console.log("Aqui: ", dataBaseVersionResult_.rowCount);
+
+  const dataBaseResulValue = dataBaseVersionResult.rows[0].server_version;
+  console.log("Aqui: ", dataBaseResulValue);
+
   response.status(200).json({
-    "teste de api funcionando": "ok",
+    updated_at: updatedAt,
+    dependencies: {
+      database: {
+        version: dataBaseResulValue,
+      },
+    },
   });
 }
 export default status;
