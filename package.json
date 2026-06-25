@@ -11,12 +11,16 @@
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "migration:create": "node-pg-migrate -m infra/migration create",
+    "migration:up": "node-pg-migrate -m infra/migration --envPath .env.development up"
   },
   "author": "jefferson de almeida",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^17.4.1",
     "next": "^16.2.7",
+    "node-pg-migrate": "^8.0.4",
     "pg": "^8.21.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
