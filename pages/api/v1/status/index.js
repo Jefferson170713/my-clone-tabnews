@@ -20,6 +20,7 @@ async function status(request, response) {
   });
   const databaseOpendConnectionValue = databaseOpenedConnection.rows[0].count;
   // const pgStatdatabase = await database.query("SELECT * FROM pg_stat_database;");
+  const environmentVariable = process.env.NODE_ENV;
 
   response.status(200).json({
     updated_at: updatedAt,
@@ -30,6 +31,7 @@ async function status(request, response) {
         opened_connections: databaseOpendConnectionValue,
       },
     },
+    environmont_variable: environmentVariable,
   });
 }
 export default status;
