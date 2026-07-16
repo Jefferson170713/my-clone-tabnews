@@ -10,15 +10,15 @@ Em sistemas comerciais e escaláveis, o esquema de um banco de dados relacional 
 
 Para resolver este problema, implementamos o conceito de **Migrations (Migrações)**. Uma migração é um arquivo de script versionado que funciona como um "commit de Git" exclusivo para o banco de dados.
 
-
-
 ### A Simetria do `up` e `down`:
+
 Todo arquivo de migração gerado de forma declarativa expõe duas funções fundamentais baseadas em promessas:
 
 - **`up`**: Define as instruções necessárias para evoluir e aplicar novas estruturas ao banco de dados (ex: criar uma tabela ou adicionar restrições).
-- **`down`**: Define as instruções exatas para reverter e desfazer as alterações aplicadas pela função `up`, permitindo que a infraestrutura realize *rollbacks* seguros em caso de falhas catastróficas em produção.
+- **`down`**: Define as instruções exatas para reverter e desfazer as alterações aplicadas pela função `up`, permitindo que a infraestrutura realize _rollbacks_ seguros em caso de falhas catastróficas em produção.
 
 ### A Importância do Prefixo Timestamp:
+
 Ao criar uma migração, a ferramenta gera um prefixo numérico baseado no **Unix Timestamp** (representação do tempo em milissegundos). Essa convenção de nomenclatura garante a ordem cronológica imutável de execução das instruções, impedindo conflitos de precedência quando múltiplos desenvolvedores criam tabelas de forma simultânea no mesmo repositório.
 
 ---
@@ -46,6 +46,7 @@ DATABASE_URL=postgres://local_user:local_password@localhost:5432/local_db
 ```
 
 ### Anatomia da URI de Conexão:
+
 - `postgres://`: Protocolo de rede de comunicação do banco de dados.
 - `local_user:local_password`: Credenciais de autenticação (Usuário e Senha).
 - `@localhost:5432`: Endereço IP do host e a porta de escuta TCP mapeada no container Docker.
@@ -65,6 +66,7 @@ Mapeamos novos gatilhos operacionais na seção de `scripts` para simplificar a 
 ```
 
 ### Explicação Técnica das Flags:
+
 - **`-m infra/migrations`**: Altera o diretório padrão da ferramenta, instruindo o core do pacote a salvar e buscar os arquivos de migração dentro da nossa pasta especializada de arquitetura.
 - **`create`**: Comando gerador que constrói o esqueleto boilerplate com os blocos `up` e `down`.
 - **`--envPath .env.development`**: Injeta de forma explícita o arquivo contendo a nossa `DATABASE_URL` secreta para que o executor de migrações consiga autenticar e abrir o canal de rede com o banco de dados.
