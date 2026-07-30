@@ -21,7 +21,7 @@ test("all migration files should be loadable as CommonJS", () => {
 });
 
 test("new migration files should default to CommonJS syntax", () => {
-  const templatePath = path.join(process.cwd(), "infra/migrations/template.js");
+  const templatePath = path.join(process.cwd(), "infra/template.js");
   const templateContent = fs.readFileSync(templatePath, "utf8");
 
   expect(templateContent).toContain("module.exports");
