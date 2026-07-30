@@ -1,24 +1,18 @@
 /**
  * @type {import('node-pg-migrate').ColumnDefinitions | undefined}
  */
-const shorthands = undefined;
+export const shorthands = undefined;
 
 /**
  * @param pgm {import('node-pg-migrate').MigrationBuilder}
  * @param run {() => void | undefined}
  * @returns {Promise<void> | void}
  */
-async function up(pgm) {}
+export const up = (pgm) => {};
 
 /**
  * @param pgm {import('node-pg-migrate').MigrationBuilder}
  * @param run {() => void | undefined}
  * @returns {Promise<void> | void}
  */
-async function down(pgm) {}
-
-module.exports = {
-  shorthands,
-  up,
-  down,
-};
+export const down = (pgm) => {};
