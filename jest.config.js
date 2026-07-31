@@ -1,8 +1,10 @@
 const dotenv = require("dotenv");
-
+const dotEnvExpand = require("dotenv-expand");
 dotenv.config({
   path: ".env.development",
 });
+
+dotEnvExpand.expand(dotenv.config({ path: ".env.development" }));
 
 const nextJest = require("next/jest");
 
